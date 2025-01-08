@@ -1,10 +1,10 @@
 package themes;
 
 public class Theme {
-     public String getId() {
+     public int getId() {
 		return id;
 	}
-	public void setId(String id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 	public String getName() {
@@ -19,7 +19,7 @@ public class Theme {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	public String id;
+	public int id;
      public String name;
      public String description;
 }

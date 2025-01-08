@@ -19,7 +19,7 @@ public class ThemeServices {
 		else {
 			System.out.println("Can not add null theme");
 		}
-		
+		// na valw return
 	}
 	// removes a theme from the list if it already exists
 	public void removeTheme(Theme theme) {
@@ -38,6 +38,18 @@ public class ThemeServices {
 		}
 		}
 	
-	// methodos pou na kanei update
-	
+	// methodos pou na kanei update px to theme stin klasi theme
+	public List<Theme> updateTheme(int id, String new_name, String new_description){
+	     for (Theme theme : themes) {
+	    	 if (theme.getId() == id) {
+	    		 if (new_name != null)
+	    			 theme.setName(new_name);
+	    		 if (new_description != null)
+	    		     theme.setDescription(new_description);
+	    		 
+	    		 
+	    	 }
+	     }
+		     return themes;
+    }
 }
