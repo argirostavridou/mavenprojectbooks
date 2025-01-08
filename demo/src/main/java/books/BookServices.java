@@ -10,17 +10,19 @@ import themes.ThemeServices;
 
 public class BookServices {
     
-	AuthorServices authorServices;
-	ThemeServices themeServices;
+	AuthorServices authorServices; //upostiriktikh uphresia
+	ThemeServices themeServices;  //xrhsimopoiei uposthriktiki upiresia
 	
+	// constructor arxikopoiei ta AuthorServices kai Themeservices wste na einai diathesima gia tis alles methodous
 	public BookServices(AuthorServices a, ThemeServices b) {
 		authorServices = a;
 		themeServices = b;
 	}
 	
-	
+	// H lista books apothikeuei ola ta vivlia
 	private List<Book> books = new ArrayList<Book>();
 	
+	// methodos gia prosthiki vivliou stin lista
 	public void addBook(Book book) {
 		if (book != null) {
 		     books.add(book);

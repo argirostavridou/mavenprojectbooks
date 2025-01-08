@@ -5,11 +5,12 @@ import java.util.List;
 
 public class ThemeServices {
 
-	//Themes
+	// Themes einai mia lista pou apothikeuei ola ta antikeimena tupou theme
 	private List<Theme> themes = new ArrayList<Theme>();
 	
-	//methods
 	
+	// methodos gia anaktisi olwn twn thematwn
+	// epistrefei oli tin lista twn thematwn
 	public List<Theme> getAllThemes() {
 	    return themes;
 	}
