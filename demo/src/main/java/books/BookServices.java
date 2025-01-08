@@ -39,7 +39,8 @@ public class BookServices {
 		}
 		
 		
-		// methodos pou the pernei to id kai tha kanei update ton titlo kai ton author tou book
+		
+		 // methodos pou tha pairnei to id tou theme kai tha to prosthetei sto id tou book
 		 public List<Book> updateBook(int id, String new_title, String new_author){
 		     for (Book book : books) {
 		    	 if (book.getId() == id) {
@@ -53,4 +54,5 @@ public class BookServices {
 		   
 			     return books;
 	    } 
+		 
 }
