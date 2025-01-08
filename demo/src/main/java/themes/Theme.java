@@ -1,7 +1,8 @@
 package themes;
 
 public class Theme {
-     public int getId() {
+     public static final String Services = null;
+	public int getId() {
 		return id;
 	}
 	public void setId(int id) {
@@ -19,7 +20,13 @@ public class Theme {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	public int id;
-     public String name;
-     public String description;
+	private int id;
+    private String name;
+    private String description;
+    
+    public Theme(int id, String name, String description) {
+        this.id = id;
+        this.name = name;
+        this.description = description;
+    }
 }

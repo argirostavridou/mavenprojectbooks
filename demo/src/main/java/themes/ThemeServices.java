@@ -9,6 +9,10 @@ public class ThemeServices {
 	private List<Theme> themes = new ArrayList<Theme>();
 	
 	//methods
+	
+	public List<Theme> getAllThemes() {
+	    return themes;
+	}
 	// Prepei na kanoume methodous gia leitourgikothtes prosthiki/diagrafi stin lista
 	//adds a new theme to the list themes
 	public void addTheme(Theme theme) {
@@ -22,14 +26,14 @@ public class ThemeServices {
 		// na valw return
 	}
 	// removes a theme from the list if it already exists
-	public void removeTheme(Theme theme) {
-		if (themes.contains(theme)) {
-			themes.remove(theme);
-			System.out.println("Theme removed:" + theme ); }
-			else {
-				System.out.println("Theme was not found in the list.");
-			}
-		}
+	public void removeTheme(int id) {
+	    boolean removed = themes.removeIf(theme -> theme.getId() == id);
+	    if (removed) {
+	        System.out.println("Theme with id " + id + " removed.");
+	    } else {
+	        System.out.println("Theme with id " + id + " not found.");
+	    }
+	}
 	// methodos gia na emfanizei thn lista
 	public void printThemes() {
 		System.out.println("Themes in the list:");

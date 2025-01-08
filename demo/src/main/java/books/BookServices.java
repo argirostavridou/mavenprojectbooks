@@ -2,14 +2,23 @@ package books;
 import java.util.ArrayList;
 import java.util.List;
 
+import authors.Author;
+import authors.AuthorServices;
 import themes.Theme;
-
-
-
+import themes.ThemeServices;
 
 
 public class BookServices {
-
+    
+	AuthorServices authorServices;
+	ThemeServices themeServices;
+	
+	public BookServices(AuthorServices a, ThemeServices b) {
+		authorServices = a;
+		themeServices = b;
+	}
+	
+	
 	private List<Book> books = new ArrayList<Book>();
 	
 	public void addBook(Book book) {
@@ -56,19 +65,18 @@ public class BookServices {
 		
 		 // methodos pou tha pairnei to id tou theme kai tha to prosthetei sto id tou book
 		 // methodos pou tha pairnei to id kai to theme tou vivliou
-		public List<Book> getbookinfo(int book_id, int theme_id) {
-			//tha vrw to biblio me bash to id tou.
-			for (Book book : books) {
-				if(book_id == book.getId()) {
-					for(Theme theme : themes) {
-					     if(theme_id == theme.getId()) {
-							
-						}
+				 public List<Book> getbookinfo(int book_id, int theme_id) {
+					    for (Book book : books) {
+					        if (book.getId() == book_id) {
+					            List<Theme> themes = themeServices.getAllThemes();
+					            for (Theme theme : themes) {
+					                if (theme.getId() == theme_id) {
+					                    System.out.println("Book: " + book + " is linked to Theme: " + theme);
+					                }
+					            }
+					        }
+					    }
+					    return books;
 					}
-				}
-			}
-			return books;
-		}
-		 
-		 
-}
+        }
+
