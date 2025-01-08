@@ -39,5 +39,21 @@ public class AuthorServices {
 			}
 			}
 		
-		// methodos pou na kanei update
+		// methodos pou tha pernei to id tou author kai tha kanei update to onoma kai date
+		public List<Theme> updateAuthor(int id, String new_name, String new_date){
+			for (Author author : authors) {
+				if (author.getId() == id) {
+					if (new_name != null)
+						author.setFirstName(new_name);
+					if (new_date != null)
+						author.setDateOfBirth(new_date);;
+				}
+			}
+			return null;
+		}
+
 }
+		
+		
+		
+

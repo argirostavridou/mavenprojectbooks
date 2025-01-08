@@ -38,7 +38,7 @@ public class ThemeServices {
 		}
 		}
 	
-	// methodos pou na kanei update px to theme stin klasi theme
+	// methodos pou na kanei update to theme stin klasi theme
 	public List<Theme> updateTheme(int id, String new_name, String new_description){
 	     for (Theme theme : themes) {
 	    	 if (theme.getId() == id) {

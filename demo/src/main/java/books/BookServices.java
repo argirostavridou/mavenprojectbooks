@@ -36,8 +36,21 @@ public class BookServices {
 			for (Book book : books) {
 				System.out.println(book);
 			}
-			}
+		}
 		
-		// methodos pou na kanei update
-	
+		
+		// methodos pou the pernei to id kai tha kanei update ton titlo kai ton author tou book
+		 public List<Book> updateBook(int id, String new_title, String new_author){
+		     for (Book book : books) {
+		    	 if (book.getId() == id) {
+		    		 if (new_title != null)
+		    			 book.setTitle(new_title);
+		    		 if (new_author != null)
+		    		     book.setAuthor(new_author);
+		    		 		    		 
+		    	     }
+		         }
+		   
+			     return books;
+	    } 
 }

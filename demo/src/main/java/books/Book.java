@@ -1,17 +1,17 @@
 package books;
 
 public class Book {
-      public String id;
+      public int id;
       public String title;
       public String author;
       public String publisher;
       public String publishedYear;
       public String description;
       public String themes;
-	public String getId() {
+	public int getId() {
 		return id;
 	}
-	public void setId(String id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 	public String getTitle() {
