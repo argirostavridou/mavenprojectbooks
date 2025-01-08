@@ -1,13 +1,18 @@
 package books;
 
+import java.util.List;
+
+import authors.Author;
+import themes.Theme;
+
 public class Book {
       public int id;
       public String title;
-      public String author;
+      public Author author;
       public String publisher;
       public String publishedYear;
       public String description;
-      public String themes;
+      public List<Theme> theme;
 	public int getId() {
 		return id;
 	}
@@ -20,10 +25,10 @@ public class Book {
 	public void setTitle(String title) {
 		this.title = title;
 	}
-	public String getAuthor() {
+	public Author getAuthor() {
 		return author;
 	}
-	public void setAuthor(String author) {
+	public void setAuthor(Author author) {
 		this.author = author;
 	}
 	public String getPublisher() {
@@ -44,10 +49,10 @@ public class Book {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	public String getThemes() {
-		return themes;
+	public List<Theme> getThemes() {
+		return theme;
 	}
-	public void setThemes(String themes) {
-		this.themes = themes;
+	public void setThemes(List<Theme> theme) {
+		this.theme = theme;
 	}
 }
