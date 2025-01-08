@@ -49,7 +49,7 @@ public class Book {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	public List<Theme> getThemes() {
+	public List<Theme> getTheme() {
 		return theme;
 	}
 	public void setThemes(List<Theme> theme) {

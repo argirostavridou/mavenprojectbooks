@@ -37,22 +37,38 @@ public class BookServices {
 				System.out.println(book);
 			}
 		}
-		
+
+		// methodos pou tha pairnei to id tou theme kai tha to prosthetei sto id tou book
+				 public List<Book> updateBook(int id, String new_title, Author new_author){
+				     for (Book book : books) {
+				    	 if (book.getId() == id) {
+				    		 if (new_title != null)
+				    			 book.setTitle(new_title);
+				    		 if (new_author != null)
+				    		     book.setAuthor(new_author);
+				    		 		    		 
+				    	     }
+				         }
+				   
+					     return books;
+			    } 
 		
 		
 		 // methodos pou tha pairnei to id tou theme kai tha to prosthetei sto id tou book
-		 public List<Book> updateBook(int id, String new_title, String new_author){
-		     for (Book book : books) {
-		    	 if (book.getId() == id) {
-		    		 if (new_title != null)
-		    			 book.setTitle(new_title);
-		    		 if (new_author != null)
-		    		     book.setAuthor(new_author);
-		    		 		    		 
-		    	     }
-		         }
-		   
-			     return books;
-	    } 
+		 // methodos pou tha pairnei to id kai to theme tou vivliou
+		public List<Book> getbookinfo(int book_id, int theme_id) {
+			//tha vrw to biblio me bash to id tou.
+			for (Book book : books) {
+				if(book_id == book.getId()) {
+					for(Theme theme : themes) {
+					     if(theme_id == theme.getId()) {
+							
+						}
+					}
+				}
+			}
+			return books;
+		}
+		 
 		 
 }
