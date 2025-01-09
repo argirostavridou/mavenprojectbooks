@@ -52,6 +52,11 @@ public class AuthorServices {
 			return null;
 		}
 
+		public List<Author> getAuthors() {
+			
+			return this.authors;
+		}
+
 }
 		
 		
