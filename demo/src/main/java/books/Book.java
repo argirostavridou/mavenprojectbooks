@@ -19,6 +19,24 @@ public class Book {
 		return id;
 	}
 
+	@Override
+	public String toString() {
+		return "Book [id=" + id + ", title=" + title + ", author=" + author + ", publisher=" + publisher
+				+ ", publishedYear=" + publishedYear + ", description=" + description + ", themes=" + themes + "]";
+	}
+
+	public Book(int id, String title, Author author, String publisher, int publishedYear, String description,
+			List<Theme> themes) {
+		super();
+		this.id = id;
+		this.title = title;
+		this.author = author;
+		this.publisher = publisher;
+		this.publishedYear = publishedYear;
+		this.description = description;
+		this.themes = themes;
+	}
+
 	public void setId(int id) {
 		this.id = id;
 	}

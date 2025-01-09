@@ -32,7 +32,7 @@ public class AuthorServices {
 				}
 			}
 		// methodos gia na emfanizei thn lista
-		public void printAuthorss() {
+		public void printAuthors() {
 			System.out.println("Authors in the list:");
 			for (Author author : authors) {
 				System.out.println(author);

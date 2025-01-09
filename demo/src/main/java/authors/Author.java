@@ -2,7 +2,14 @@ package authors;
 
 public class Author {
      public int id;
-     public String firstName;
+     public Author(int id, String firstName, String lastName, String dateOfBirth) {
+		super();
+		this.id = id;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.dateOfBirth = dateOfBirth;
+	}
+	public String firstName;
      public String lastName;
      public String dateOfBirth;
 	public int getId() {
@@ -29,4 +36,10 @@ public class Author {
 	public void setDateOfBirth(String dateOfBirth) {
 		this.dateOfBirth = dateOfBirth;
 	}
+	@Override
+	public String toString() {
+		return "Author [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", dateOfBirth="
+				+ dateOfBirth + "]";
+	}
+	
 }
