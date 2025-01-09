@@ -49,20 +49,27 @@ public class BookServices {
 			}
 		}
 
-		// methodos pou tha pairnei to id tou theme kai tha to prosthetei sto id tou book
-				 public List<Book> updateBook(int id, String new_title, Author new_author){
-				     for (Book book : books) {
-				    	 if (book.getId() == id) {
-				    		 if (new_title != null)
-				    			 book.setTitle(new_title);
-				    		 if (new_author != null)
-				    		     book.setAuthor(new_author);
-				    		 		    		 
-				    	     }
-				         }
-				   
-					     return books;
-			    } 
+		 
+		// h updateBook pairnei to id tou book kai kanei update tis idiotites tous
+		public List<Book> updateBook(int id, String newTitle ,Author newAuthor, String newPublisher, int newYear, String newDesc, ArrayList<Theme> newThemes) {
+			for (Book book : books) {
+				if (id == book.getId()) {
+					if (newTitle != null)
+						book.setTitle(newTitle);;
+					if (newAuthor != null)
+						book.setAuthor(newAuthor);
+					if (newPublisher != null)
+						book.setPublisher(newPublisher);
+					if (newYear != 0)
+						book.setPublishedYear(newYear);
+					if (newDesc != null)
+						book.setDescription(newDesc);
+					if (newThemes != null)
+						book.setThemes(newThemes);				
+				}
+			}
+			return books;
+		}
 		
 		
 		 // methodos pou tha pairnei to id tou theme kai tha to prosthetei sto id tou book

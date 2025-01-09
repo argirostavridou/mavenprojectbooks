@@ -10,7 +10,7 @@ public class Book {
       public String title;
       public Author author;
       public String publisher;
-      public String publishedYear;
+      public int publishedYear;
       public String description;
       public List<Theme> theme;
 	public int getId() {
@@ -37,10 +37,10 @@ public class Book {
 	public void setPublisher(String publisher) {
 		this.publisher = publisher;
 	}
-	public String getPublishedYear() {
+	public int getPublishedYear() {
 		return publishedYear;
 	}
-	public void setPublishedYear(String publishedYear) {
+	public void setPublishedYear(int publishedYear) {
 		this.publishedYear = publishedYear;
 	}
 	public String getDescription() {
