@@ -3,10 +3,12 @@ package authors;
 import java.util.ArrayList;
 import java.util.List;
 
-import themes.Theme;
+import org.springframework.stereotype.Service;
 
+import themes.Theme;
+@Service
 public class AuthorServices {
-	
+	// @autowired
 	private List<Author> authors = new ArrayList<Author>();
 	
 	// Prepei na kanoume methodous gia leitourgikothtes prosthiki/diagrafi stin lista

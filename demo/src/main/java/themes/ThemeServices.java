@@ -3,6 +3,9 @@ package themes;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.stereotype.Service;
+
+@Service
 public class ThemeServices {
 
 	// Themes einai mia lista pou apothikeuei ola ta antikeimena tupou theme

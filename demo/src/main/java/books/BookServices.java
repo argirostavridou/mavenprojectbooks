@@ -3,14 +3,19 @@ package books;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import authors.Author;
 import authors.AuthorServices;
 import themes.Theme;
 import themes.ThemeServices;
 
+@Service
 public class BookServices {
-
-    private AuthorServices authorServices; 
+    @Autowired
+    private AuthorServices authorServices;
+    @Autowired
     private ThemeServices themeServices; 
 
     // Constructor
