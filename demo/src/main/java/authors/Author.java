@@ -10,8 +10,8 @@ public class Author {
 		this.dateOfBirth = dateOfBirth;
 	}
 	public String firstName;
-     public String lastName;
-     public String dateOfBirth;
+    public String lastName;
+    public String dateOfBirth;
 	public int getId() {
 		return id;
 	}

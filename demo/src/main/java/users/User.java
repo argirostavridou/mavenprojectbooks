@@ -38,3 +38,14 @@ public class User {
         System.out.println(this.name + " returned the book: " + book.getTitle());
     }
 }
+
+/* PROSOXI!!!!!!!
+ * Autos o tropos pou exw ftiaxei den einai o swstos. Oi danismoi twn vivliwn den prepei na ginontai ston user 
+ * kai na kalountai mesa ston user alla prepei na apothikeyontai se xehoristi klasi pinaka kai o user na xrisimopoieitai san attribute
+ */
+
+
+
+
+
+
