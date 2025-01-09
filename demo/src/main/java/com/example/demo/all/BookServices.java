@@ -1,15 +1,10 @@
-package books;
+package com.example.demo.all;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import authors.Author;
-import authors.AuthorServices;
-import themes.Theme;
-import themes.ThemeServices;
 
 @Service
 public class BookServices {

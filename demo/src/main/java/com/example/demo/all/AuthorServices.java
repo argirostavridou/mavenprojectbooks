@@ -1,11 +1,9 @@
-package authors;
+package com.example.demo.all;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
-
-import themes.Theme;
 @Service
 public class AuthorServices {
 	// @autowired

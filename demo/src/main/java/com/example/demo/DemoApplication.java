@@ -5,12 +5,12 @@ import java.util.ArrayList;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import authors.Author;
-import authors.AuthorServices;
-import books.Book;
-import books.BookServices;
-import themes.ThemeServices;
-import themes.Theme;
+import com.example.demo.all.Author;
+import com.example.demo.all.AuthorServices;
+import com.example.demo.all.Book;
+import com.example.demo.all.BookServices;
+import com.example.demo.all.Theme;
+import com.example.demo.all.ThemeServices;
 @SpringBootApplication // einai h basiki endeixi gia tin ekkinish mias spring booth efarmogis
 public class DemoApplication {
 

@@ -1,4 +1,4 @@
-package authors;
+package com.example.demo.all;
 
 public class Author {
      public int id;

@@ -1,4 +1,4 @@
-package themes;
+package com.example.demo.all;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,7 +11,7 @@ public class ThemeServices {
 	// Themes einai mia lista pou apothikeuei ola ta antikeimena tupou theme
 	private List<Theme> themes = new ArrayList<Theme>();
 	
-	
+
 	public ThemeServices() {
 		super();
 	}
@@ -22,7 +22,7 @@ public class ThemeServices {
 	}
 	// Prepei na kanoume methodous gia leitourgikothtes prosthiki/diagrafi stin lista
 	//adds a new theme to the list themes
-	public void addTheme(Theme theme) {
+	public List<Theme> addTheme(Theme theme) {
 		if (theme != null) {
 		     themes.add(theme);
 		     System.out.println("Theme added" + theme);
@@ -31,6 +31,7 @@ public class ThemeServices {
 			System.out.println("Can not add null theme");
 		}
 		// na valw return
+		return themes;
 	}
 	// removes a theme from the list if it already exists
 	public void removeTheme(int id) {

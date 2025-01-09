@@ -1,4 +1,4 @@
-package themes;
+package com.example.demo.all;
 
 public class Theme {
 	private int id;
