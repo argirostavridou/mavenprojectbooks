@@ -9,9 +9,9 @@ import org.springframework.stereotype.Service;
 @Service
 public class BookServices {
     @Autowired
-    private AuthorServices authorServices;
+    private AuthorServices authorServices; // INJECTION
     @Autowired
-    private ThemeServices themeServices; 
+    private ThemeServices themeServices; // INJECTION
 
     // Constructor
     public BookServices(AuthorServices authorServices, ThemeServices themeServices) {

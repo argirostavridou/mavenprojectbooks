@@ -1,5 +1,5 @@
-package com.example.demo.all;
-
-public class RentalServices {
-
-}
+//package com.example.demo.all;
+//
+//public class RentalServices {
+//
+//}
