@@ -17,7 +17,7 @@ import com.example.demo.all.ThemeServices; // H yphresia pou xeirizetai th logik
 @RestController // Dilwnei oti auti h klash einai enas controller pou tha epistrefei dedomena se JSON format
 @RequestMapping("themes") // Orizei thn vasili diadromi gia ola ta endpoints auths ths klashs
                           // Diladi ola ta URLs pou diaxeirizetai autos o controller xekinoun me /users
-public class Controller {
+public class ThemeController {
     @Autowired // INJECTION h klasi xreiazetai to monadiko antikeimeno themeServices pou exeis
     ThemeServices themeServices; // Kanoume injection to antikeimeno themeServices gia xrhsh mesa ston controller
     
