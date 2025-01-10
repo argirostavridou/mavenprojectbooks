@@ -3,13 +3,14 @@ package com.example.demo.all;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 public class ThemeServices {
 
-	// Themes einai mia lista pou apothikeuei ola ta antikeimena tupou theme
-	private List<Theme> themes = new ArrayList<Theme>();
+	
+	@Autowired ThemeRepository repository;
 	
 
 	public ThemeServices() {
@@ -18,20 +19,13 @@ public class ThemeServices {
 	// methodos gia anaktisi olwn twn thematwn
 	// epistrefei oli tin lista twn thematwn
 	public List<Theme> getAllThemes() {
-	    return themes;
+	    return repository.findAll();
 	}
 	// Prepei na kanoume methodous gia leitourgikothtes prosthiki/diagrafi stin lista
 	//adds a new theme to the list themes
 	public List<Theme> addTheme(Theme theme) {
-		if (theme != null) {
-		     themes.add(theme);
-		     System.out.println("Theme added" + theme);
-		}
-		else {
-			System.out.println("Can not add null theme");
-		}
-		// na valw return
-		return themes;
+		repository.save(theme);
+		return this.getAllThemes();
 	}
 	// Tha ftiaxw methodo pou na dexetai JSON me polles plirofories me tin morfi listas
 	public List<Theme> addManyThemes(List<Theme> list){

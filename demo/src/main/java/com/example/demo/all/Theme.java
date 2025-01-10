@@ -1,9 +1,36 @@
 package com.example.demo.all;
 
+import java.util.Set;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.ManyToMany;
+import jakarta.persistence.Table;
+// prepei pleon na vazw empty constructors, den peirazei na exw duo constructors
+@Entity
+@Table(name = "theme")
 public class Theme {
-	private int id;
+	
+	@Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+	// @JsonIgnore
+	@Column(name = "theme_id", nullable = false)
+	private Integer id;
+	
+	@Column(name = "name", nullable = false)
 	private String name;
+	
+	@Column(name = "description", nullable = false)
 	private String description;
+	
+	@ManyToMany (mappedBy = "themes")
+	@JsonIgnore
+	private Set<Book> books;
 	
 	public Theme(int id, String name, String description) {
 		this.id = id;

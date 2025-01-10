@@ -33,7 +33,8 @@ public class BookController {
     // lhpsh twn books
     @GetMapping("/all")
     public List<Book> getAllBooks() {
-        return bookServices.getBooks();
+//        return bookServices.getBooks();
+    	return null;
     }
 
     // Endpoint for update book
@@ -64,5 +65,4 @@ public class BookController {
         bookServices.addBookTheme(idBook, idTheme);
         return "Theme added to the book.";
     }
-}
 }
