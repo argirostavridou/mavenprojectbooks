@@ -38,6 +38,13 @@ public class ThemeController {
 		return themeServices.addTheme(theme); // Prosthetei ena kainourio "Theme" kai epistrefei th nea lista
 	}
 	
+	// prosthetw tin methodo tis ThemeServices pou dexetai JSON se morfi listas
+	@PostMapping("/addMany")
+	public List<Theme> addManyThemes(@RequestBody List<Theme> themes){
+		return themeServices.addManyThemes(themes);
+	}
+	
+	
 	@DeleteMapping("/delete") // Endpoint gia DELETE sto /themes/delete
 	public void deleteTheme(@RequestParam Integer id){ // to @RequestPsram dinei prosvasi se parametrous pou erxontai apo to URL enos GET/DELETE request.
 		themeServices.removeTheme(id);	// Diagrafei to "Theme" me to sygkekrimeno ID

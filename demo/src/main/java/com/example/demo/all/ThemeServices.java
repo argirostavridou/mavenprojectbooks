@@ -33,6 +33,17 @@ public class ThemeServices {
 		// na valw return
 		return themes;
 	}
+	// Tha ftiaxw methodo pou na dexetai JSON me polles plirofories me tin morfi listas
+	public List<Theme> addManyThemes(List<Theme> list){
+		 for (Theme theme : list) {
+			 // if() ///
+			 // themes.add(theme)
+			 this.addTheme(theme);
+		 }
+		 return this.themes;
+	} 
+	
+	
 	// removes a theme from the list if it already exists
 	public void removeTheme(int id) {
 	    boolean removed = themes.removeIf(theme -> theme.getId() == id);
